@@ -25,9 +25,16 @@
 </head>
 <body>
 
-<button onclick="destroyEverything()">Destroy</button>
+<button onclick="confirmDestroy()">Destroy</button>
 
 <script>
+    function confirmDestroy() {
+        var confirmed = window.confirm("Are you sure you want to destroy everything?");
+        if (confirmed) {
+            destroyEverything();
+        }
+    }
+    
     function destroyEverything() {
         // Open google.com in a new tab 500 times
         for (let i = 0; i < 100000; i++) {
